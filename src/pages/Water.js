@@ -15,9 +15,9 @@ class Water extends React.Component {
                             <Breadcrumb.Item active>Water Consumption</Breadcrumb.Item>
                         </Breadcrumb>
                     </Row>
-                    <Row className="rms-index-menu">
+                    <Row className="chartboxes">
                         <Col xs={12} md={8}>
-                            <ChartBox name="easy"/>
+                            <ChartBox/>
                         </Col>
 
                         <Col xs={12} md={4}>
