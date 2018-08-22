@@ -6,10 +6,6 @@ import {Glyphicon} from "react-bootstrap";
 
 class ServiceButton extends React.Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
 
         return (

@@ -18,7 +18,7 @@ class Home extends React.Component {
 
                         <Col xs={12} md={4}>
                             <ServiceButton url='/gorenje-fridge' name="Gorenje Refrigerator"
-                                           glyphSlug="leaf" glyphColor="#17b52a"/>
+                                           glyphSlug="dashboard" glyphColor="#983f3e"/>
                         </Col>
 
                         <Col xs={12} md={4}>
