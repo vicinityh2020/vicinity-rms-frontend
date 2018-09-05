@@ -1,11 +1,10 @@
 import React from 'react';
-import '../css/ServiceButton.css'
+import '../css/ServiceButton.css';
 import {Link} from "react-router-dom";
 import PropTypes from 'prop-types';
 import {Glyphicon} from "react-bootstrap";
 
 class ServiceButton extends React.Component {
-
     render() {
 
         return (

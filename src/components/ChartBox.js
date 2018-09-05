@@ -31,7 +31,7 @@ class ChartBox extends React.Component {
                 yAxes: [{
                     ticks: {
                         userCallback: function (item) {
-                            return `${item} kWh`;
+                            return `${item} iwmacunits`;
                         },
                     }
                 }]
