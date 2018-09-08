@@ -2,6 +2,7 @@ import React from 'react';
 import {Breadcrumb, Col, Grid, Row} from "react-bootstrap";
 import Header from "../components/Header";
 import ChartBox from "../components/ChartBox";
+import AlarmTable from "../components/AlarmTable";
 
 class Water extends React.Component {
     render() {
@@ -21,7 +22,7 @@ class Water extends React.Component {
                         </Col>
 
                         <Col xs={12} md={4}>
-                            Control Variables
+                            <AlarmTable resource="water"/>
                         </Col>
                     </Row>
                 </Grid>

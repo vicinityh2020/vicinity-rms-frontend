@@ -5,15 +5,22 @@ import {Line} from "react-chartjs-2";
 
 class ChartBox extends React.Component {
 
+    static propTypes = {
+        units: PropTypes.string.isRequired,
+        labels: PropTypes.array.isRequired,
+        data: PropTypes.array.isRequired
+    };
+
     constructor(props) {
         super(props);
 
         this.state = {
             dummyData: {
+                // TODO: retrieve real data from backend in the following format:
                 labels: ["January", "February", "March", "April", "May", "June", "July"],
                 datasets: [
                     {
-                        label: "Water Consumption 2018",
+                        label: "Power Consumption 2018",
                         backgroundColor: "rgba(77,147,222,0.2)",
                         borderColor: "rgba(77,147,222,1)",
                         // TODO: retrieve real data from backend in the following format:
@@ -26,12 +33,14 @@ class ChartBox extends React.Component {
 
     render() {
 
+        let units = this.props.units;
+
         const options = {
             scales: {
                 yAxes: [{
                     ticks: {
                         userCallback: function (item) {
-                            return `${item} iwmacunits`;
+                            return `${item} ${units}`;
                         },
                     }
                 }]
