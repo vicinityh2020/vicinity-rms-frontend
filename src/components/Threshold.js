@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Button, Panel} from "react-bootstrap";
 
-class CurrentRate extends React.Component {
+class Threshold extends React.Component {
 
     static propTypes = {
         units: PropTypes.string.isRequired,
@@ -11,14 +11,14 @@ class CurrentRate extends React.Component {
     render() {
         return (
             <Panel>
-                <Panel.Heading>Current Consumption Rate</Panel.Heading>
+                <Panel.Heading>Threshold Values</Panel.Heading>
                 <Panel.Body style={{padding: '42px 15px'}}>
-                    <span className="blue">86 {this.props.units + 'h'}</span>
-                    <Button style={{float: 'right'}} bsStyle="primary">Refresh</Button>
+                    <span className="blue">170 {this.props.units + 'h'}</span>
+                    <Button style={{float: 'right'}} bsStyle="primary">Modify</Button>
                 </Panel.Body>
             </Panel>
         )
     }
 }
 
-export default CurrentRate;
+export default Threshold;

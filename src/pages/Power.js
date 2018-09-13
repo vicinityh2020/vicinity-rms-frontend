@@ -4,6 +4,8 @@ import Header from "../components/Header";
 import ChartBox from "../components/ChartBox";
 import AlarmTable from "../components/AlarmTable";
 import CurrentRate from "../components/CurrentRate";
+import FilterMenu from "../components/FilterMenu";
+import Threshold from "../components/Threshold";
 
 class Power extends React.Component {
 
@@ -27,12 +29,23 @@ class Power extends React.Component {
                         </Breadcrumb>
                     </Row>
                     <Row className="chartboxes">
-                        <Col xs={12} md={8}>
-                            <ChartBox units={this.state.units} data={[]} labels={[]}/>
+                        <Col xs={12} md={4}>
+                            <FilterMenu/>
                         </Col>
 
                         <Col xs={12} md={4}>
                             <CurrentRate units={this.state.units}/>
+                        </Col>
+
+                        <Col xs={12} md={4}>
+                            <Threshold units={this.state.units}/>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col style={{marginBottom: '60px'}} xs={12} md={12}>
+                            <ChartBox units={this.state.units} data={[]} labels={[]}/>
+                        </Col>
+                        <Col xs={12} md={12}>
                             <AlarmTable resource="power"/>
                         </Col>
                     </Row>

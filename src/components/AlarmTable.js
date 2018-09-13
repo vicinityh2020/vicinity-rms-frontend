@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Table} from "react-bootstrap";
+import {ButtonToolbar, Panel, Table, ToggleButton, ToggleButtonGroup} from "react-bootstrap";
 
 class AlarmTable extends React.Component {
 
@@ -18,42 +18,47 @@ class AlarmTable extends React.Component {
 
     render() {
         return (
-            <Table striped bordered condensed hover>
-                <thead>
-                <tr>
-                    <th>Alarm #</th>
-                    <th>Date & Time</th>
-                    <th>Description</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>{AlarmTable.randomDate(new Date(2018, 0, 1), new Date()).toLocaleString()}</td>
-                    <td><a href="#">More Info</a></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>{AlarmTable.randomDate(new Date(2018, 0, 1), new Date()).toLocaleString()}</td>
-                    <td><a href="#">More Info</a></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>{AlarmTable.randomDate(new Date(2018, 0, 1), new Date()).toLocaleString()}</td>
-                    <td><a href="#">More Info</a></td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>{AlarmTable.randomDate(new Date(2018, 0, 1), new Date()).toLocaleString()}</td>
-                    <td><a href="#">More Info</a></td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>{AlarmTable.randomDate(new Date(2018, 0, 1), new Date()).toLocaleString()}</td>
-                    <td><a href="#">More Info</a></td>
-                </tr>
-                </tbody>
-            </Table>
+            <Panel>
+                <Panel.Heading>Alarm Table</Panel.Heading>
+                <Panel.Body>
+                    <Table striped bordered condensed hover>
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Date & Time</th>
+                            <th>Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>{AlarmTable.randomDate(new Date(2018, 0, 1), new Date()).toLocaleString()}</td>
+                            <td><a href="#">More Info</a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>{AlarmTable.randomDate(new Date(2018, 0, 1), new Date()).toLocaleString()}</td>
+                            <td><a href="#">More Info</a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>{AlarmTable.randomDate(new Date(2018, 0, 1), new Date()).toLocaleString()}</td>
+                            <td><a href="#">More Info</a></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>{AlarmTable.randomDate(new Date(2018, 0, 1), new Date()).toLocaleString()}</td>
+                            <td><a href="#">More Info</a></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>{AlarmTable.randomDate(new Date(2018, 0, 1), new Date()).toLocaleString()}</td>
+                            <td><a href="#">More Info</a></td>
+                        </tr>
+                        </tbody>
+                    </Table>
+                </Panel.Body>
+            </Panel>
         )
     }
 }
