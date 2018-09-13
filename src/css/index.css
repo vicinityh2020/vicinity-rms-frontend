@@ -16,3 +16,8 @@ h1 {
 .chartboxes {
     margin-top: 100px;
 }
+
+.panel .blue {
+    font-size: 20px;
+    line-height: 32px;
+}

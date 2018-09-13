@@ -21,7 +21,7 @@ class AlarmTable extends React.Component {
             <Table striped bordered condensed hover>
                 <thead>
                 <tr>
-                    <th>#</th>
+                    <th>Alarm #</th>
                     <th>Date & Time</th>
                     <th>Description</th>
                 </tr>
@@ -39,6 +39,16 @@ class AlarmTable extends React.Component {
                 </tr>
                 <tr>
                     <td>3</td>
+                    <td>{AlarmTable.randomDate(new Date(2018, 0, 1), new Date()).toLocaleString()}</td>
+                    <td><a href="#">More Info</a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>{AlarmTable.randomDate(new Date(2018, 0, 1), new Date()).toLocaleString()}</td>
+                    <td><a href="#">More Info</a></td>
+                </tr>
+                <tr>
+                    <td>5</td>
                     <td>{AlarmTable.randomDate(new Date(2018, 0, 1), new Date()).toLocaleString()}</td>
                     <td><a href="#">More Info</a></td>
                 </tr>
