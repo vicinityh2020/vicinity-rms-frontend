@@ -11,9 +11,9 @@ class CurrentRate extends React.Component {
     render() {
         return (
             <Panel>
-                <Panel.Heading>Current Consumption Rate</Panel.Heading>
+                <Panel.Heading>Current Value</Panel.Heading>
                 <Panel.Body style={{padding: '42px 15px'}}>
-                    <span className="blue">86 {this.props.units + 'h'}</span>
+                    <span className="blue">4 {this.props.units}</span>
                     <Button style={{float: 'right'}} bsStyle="primary">Refresh</Button>
                 </Panel.Body>
             </Panel>

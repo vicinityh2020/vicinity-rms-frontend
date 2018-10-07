@@ -13,7 +13,7 @@ class Threshold extends React.Component {
             <Panel>
                 <Panel.Heading>Threshold Values</Panel.Heading>
                 <Panel.Body style={{padding: '42px 15px'}}>
-                    <span className="blue">170 {this.props.units + 'h'}</span>
+                    <span className="blue">170 {this.props.units}</span>
                     <Button style={{float: 'right'}} bsStyle="primary">Modify</Button>
                 </Panel.Body>
             </Panel>

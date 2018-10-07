@@ -6,6 +6,9 @@ import AlarmTable from "../components/AlarmTable";
 import CurrentRate from "../components/CurrentRate";
 import FilterMenu from "../components/FilterMenu";
 import Threshold from "../components/Threshold";
+import axios from 'axios';
+
+import {Config} from "../config";
 
 class Water extends React.Component {
 
@@ -13,8 +16,28 @@ class Water extends React.Component {
         super(props);
 
         this.state = {
+            day: Date.parse(new Date().toDateString()) / 1000,
             units: 'L',
+            dataset: [],
+            labels: [],
+            got: false,
         };
+    }
+
+    componentDidMount() {
+        let u = `${Config.serviceUrl}/api/water/usage/day/${this.state.day}`;
+
+        console.log('accessing ' + u);
+        axios.get(`${Config.serviceUrl}/api/water/usage/day/${this.state.day}`, {
+            headers: {
+                'Accept': 'application/json'
+            }})
+            .then(
+                (r) => {
+                    console.log('YAY!');
+                    console.log(r);
+                }
+        )
     }
 
     render() {

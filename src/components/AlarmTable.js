@@ -5,7 +5,7 @@ import {ButtonToolbar, Panel, Table, ToggleButton, ToggleButtonGroup} from "reac
 class AlarmTable extends React.Component {
 
     static propTypes = {
-        resource: PropTypes.oneOf(['water', 'power'])
+        resource: PropTypes.oneOf(['water', 'power', 'temperature'])
     };
 
     constructor(props) {
