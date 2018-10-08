@@ -28,16 +28,28 @@ class Water extends React.Component {
         let u = `${Config.serviceUrl}/api/water/usage/day/${this.state.day}`;
 
         console.log('accessing ' + u);
-        axios.get(`${Config.serviceUrl}/api/water/usage/day/${this.state.day}`, {
-            headers: {
-                'Accept': 'application/json'
-            }})
-            .then(
-                (r) => {
-                    console.log('YAY!');
-                    console.log(r);
-                }
-        )
+
+        fetch(u, {
+            credentials: 'include',
+            headers: {},
+            method: 'GET'
+        }).then(value => {
+            return value.json();
+        }).then(json => {
+            let a = 5;
+            console.log(a);
+        })
+
+        // axios.get(u, {
+        //     headers: {
+        //         'Accept': 'application/json'
+        //     }})
+        //     .then(
+        //         (r) => {
+        //             console.log('YAY!');
+        //             console.log(r);
+        //         }
+        // )
     }
 
     render() {
