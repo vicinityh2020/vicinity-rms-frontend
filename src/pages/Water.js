@@ -25,31 +25,21 @@ class Water extends React.Component {
     }
 
     componentDidMount() {
-        let u = `${Config.serviceUrl}/api/water/usage/day/${this.state.day}`;
-
-        console.log('accessing ' + u);
-
-        fetch(u, {
-            credentials: 'include',
-            headers: {},
-            method: 'GET'
-        }).then(value => {
-            return value.json();
-        }).then(json => {
-            let a = 5;
-            console.log(a);
-        })
-
-        // axios.get(u, {
-        //     headers: {
-        //         'Accept': 'application/json'
-        //     }})
-        //     .then(
-        //         (r) => {
-        //             console.log('YAY!');
-        //             console.log(r);
-        //         }
-        // )
+        // let u = `/api/water/usage/day/${this.state.day}`;
+        //
+        // console.log('accessing ' + u);
+        //
+        // fetch(u, {
+        //     credentials: 'include',
+        //     headers: {}
+        // }).then(value => {
+        //     return value.json();
+        // }).then(json => {
+        //
+        //     // TODO: uncomment as soon as iwmac data is available
+        //     //let iwmacValues = json.data();
+        //     //this.setState({dataset: iwmacValues.dataset, labels: iwmacValues.labels});
+        // })
     }
 
     render() {
