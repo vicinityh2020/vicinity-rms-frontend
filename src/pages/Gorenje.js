@@ -39,7 +39,7 @@ class Power extends React.Component {
                     </Row>
                     <Row>
                         <Col style={{marginBottom: '60px'}} xs={12} md={12}>
-                            <ChartBox units={this.state.units} data={[]} labels={[]}/>
+                            <ChartBox device='Refrigerator Temperature' units={this.state.units} data={[]} labels={[]}/>
                         </Col>
                         <Col xs={12} md={12}>
                             <AlarmTable resource="temperature"/>

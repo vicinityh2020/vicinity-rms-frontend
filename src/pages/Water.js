@@ -50,7 +50,7 @@ class Water extends React.Component {
                     <Row>
                         <Breadcrumb>
                             <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-                            <Breadcrumb.Item active>Power Consumption</Breadcrumb.Item>
+                            <Breadcrumb.Item active>Water Consumption</Breadcrumb.Item>
                         </Breadcrumb>
                     </Row>
                     <Row className="chartboxes">
@@ -68,7 +68,7 @@ class Water extends React.Component {
                     </Row>
                     <Row>
                         <Col style={{marginBottom: '60px'}} xs={12} md={12}>
-                            <ChartBox units={this.state.units} data={[]} labels={[]}/>
+                            <ChartBox device='Water Consumption' units={this.state.units} data={[]} labels={[]}/>
                         </Col>
                         <Col xs={12} md={12}>
                             <AlarmTable resource="power"/>

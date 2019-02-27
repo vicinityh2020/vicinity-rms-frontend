@@ -8,7 +8,8 @@ class ChartBox extends React.Component {
     static propTypes = {
         units: PropTypes.string.isRequired,
         labels: PropTypes.array.isRequired,
-        data: PropTypes.array.isRequired
+        data: PropTypes.array.isRequired,
+        device: PropTypes.string.isRequired
     };
 
     constructor(props) {
@@ -19,10 +20,17 @@ class ChartBox extends React.Component {
                 // TODO: retrieve real data from backend in the following format:
                 labels: [
                     "00:00", "01:00", "02:00", "03:00", "04:00", "05:00", "06:00", "07:00",
-                    "08:00", "09:00", "10:00", "11:00", "12:00"],
+                    "08:00", "09:00", "10:00", "11:00", "12:00", "13:00", "14:00"],
                 datasets: [
                     {
-                        label: "Refrigerator Temperature 3/10/18",
+
+                        label: `${this.props.device} ${(() => {
+                            
+                            let dt = new Date();
+                            
+                            return `${dt.getMonth() + 1}/${dt.getDate()}/${dt.getFullYear()}`;
+                        })()}`,
+
                         backgroundColor: "rgba(77,147,222,0.2)",
                         borderColor: "rgba(77,147,222,1)",
                         // TODO: retrieve real data from backend in the following format:
@@ -30,7 +38,7 @@ class ChartBox extends React.Component {
                             return new Array(size).fill(0).map(() => {
                                 return Math.round(Math.random() * (max - min) + min);
                             });
-                        })(13, 2, 5),
+                        })(15, 2, 5),
                     }
                 ]
             }
