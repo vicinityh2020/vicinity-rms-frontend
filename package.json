@@ -23,10 +23,10 @@
   },
   "proxy": {
     "/api/*": {
-      "target": "http://localhost:8050"
+      "target": "http://localhost:8000"
     },
     "/admin/*": {
-      "target": "http://localhost:8050"
+      "target": "http://localhost:8000"
     }
   }
 }

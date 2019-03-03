@@ -33,9 +33,9 @@ class Power extends React.Component {
                             <CurrentRate units={this.state.units}/>
                         </Col>
 
-                        <Col xs={12} md={6}>
-                            <Threshold units={this.state.units}/>
-                        </Col>
+                        {/*<Col xs={12} md={6}>*/}
+                            {/*<Threshold units={this.state.units}/>*/}
+                        {/*</Col>*/}
                     </Row>
                     <Row>
                         <Col style={{marginBottom: '60px'}} xs={12} md={12}>
